@@ -32,6 +32,35 @@ Content-Type: application/json
 Authorization: Bearer {{authToken}}
 
 {
-    "name": "Nova Tarefa",
+    "name": "Tarefa 22",
     "description": "Descrição da tarefa"
+}
+
+###
+
+# @name fetch_tasks
+
+GET {{baseUrl}}/task?page=1
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+# @name delete_task
+
+DELETE  {{baseUrl}}/task/ae959535-83fa-4020-b09d-13393191a2db
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+# @name update_task
+
+PUT  {{baseUrl}}/task/138dbb79-b037-4d72-be92-66560e55f305
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+    "name": "Novo nome",
+    "description": "Descrição nova"
 }
