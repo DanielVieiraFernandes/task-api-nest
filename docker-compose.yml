@@ -1,0 +1,13 @@
+services:
+  task-postgres:
+    container_name: task-postgres-clean
+    image: postgres
+    ports: 
+      - 5432:5432
+    environment:
+        POSTGRES_USER: daniel
+        POSTGRES_PASSWORD: docker
+        POSTGRES_DB: task-db
+        PGDATA: /data/postgres
+    volumes:
+        - ./data.pg:/data/postgres
