@@ -22,78 +22,47 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+## Descrição
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Este é um projeto de Back-end desenvolvido com NestJS, que implementa um CRUD de tarefas com autenticação JWT. O projeto segue princípios da Clean Architecture e utiliza o Prisma ORM para gerenciamento do banco de dados.
 
-## Project setup
+## Qual o objetivo do projeto?
 
-```bash
-$ yarn install
-```
+Se familiarizar com o framework, construir uma base sólida, para então, poder evoluir e me aprofundar no desenvolvimento back-end.
 
-## Compile and run the project
+## Tecnologias utilizadas no projeto
 
-```bash
-# development
-$ yarn run start
+- NestJS – Framework modular e escalável para Node.js
+- Prisma ORM – Abstração poderosa para banco de dados
+- JWT (JSON Web Token) – Autenticação segura e baseada em tokens
+- Clean Architecture – Organização do código para melhor manutenção e escalabilidade
+- TypeScript – Código mais seguro e robusto
 
-# watch mode
-$ yarn run start:dev
+## Funcionalidades
 
-# production mode
-$ yarn run start:prod
-```
+- [X] Cadastro, atualização, listagem e remoção de tarefas (CRUD)
+- [X] Autenticação segura com JWT
+- [X] Proteção de rotas para usuários autenticados
+- [X] Estrutura baseada na Clean Architecture
+- [X] Integração com o Prisma para manipulação eficiente dos dados
 
-## Run tests
+<hr>
 
-```bash
-# unit tests
-$ yarn run test
+📦 src
+ ┣ 📂 infra
+ ┃ ┣ 📂 controllers
+ ┃ ┃ ┣ 📜 task
+ ┃ ┃ ┃ ┣ 📜 get-task-details.controller.ts
+ ┃ ┃ ┃ ┗ 📜 mark-task-completed.controller.ts
+ ┃ ┗ 📂 database (configuração do Prisma)
+ ┣ 📂 modules
+ ┃ ┣ 📂 use-cases
+ ┃ ┃ ┣ 📜 get-task-details.ts
+ ┃ ┃ ┗ 📜 mark-task-completed.ts
+ ┗ 📜 main.ts (ponto de entrada da aplicação)
 
-# e2e tests
-$ yarn run test:e2e
+<hr>
 
-# test coverage
-$ yarn run test:cov
-```
+## Autenticação
 
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
-```bash
-$ yarn install -g mau
-$ mau deploy
-```
-
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+As rotas protegidas exigem um token JWT para acesso. Para obter um token, faça login com um usuário cadastrado e utilize o token nos headers das requisições.
