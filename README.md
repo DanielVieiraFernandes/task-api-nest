@@ -47,7 +47,9 @@ Se familiarizar com o framework, construir uma base sólida, para então, poder 
 - [X] Integração com o Prisma para manipulação eficiente dos dados
 
 <hr>
+## 📂 Estrutura do Projeto  
 
+```
 📦 src
  ┣ 📂 infra
  ┃ ┣ 📂 controllers
@@ -60,7 +62,7 @@ Se familiarizar com o framework, construir uma base sólida, para então, poder 
  ┃ ┃ ┣ 📜 get-task-details.ts
  ┃ ┃ ┗ 📜 mark-task-completed.ts
  ┗ 📜 main.ts (ponto de entrada da aplicação)
-
+```
 <hr>
 
 ## Autenticação
