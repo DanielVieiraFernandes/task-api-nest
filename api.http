@@ -32,8 +32,8 @@ Content-Type: application/json
 Authorization: Bearer {{authToken}}
 
 {
-    "name": "Tarefa 22",
-    "description": "Descrição da tarefa"
+    "name": "Almoçar ao meio dia",
+    "description": "Arroz, feijão, frango e legumes."
 }
 
 ###
@@ -56,7 +56,7 @@ Authorization: Bearer {{authToken}}
 
 # @name update_task
 
-PUT  {{baseUrl}}/task/138dbb79-b037-4d72-be92-66560e55f305
+PUT  {{baseUrl}}/task/4beb8050-b268-493e-ac64-81961e6d9465
 Content-Type: application/json
 Authorization: Bearer {{authToken}}
 
@@ -64,3 +64,19 @@ Authorization: Bearer {{authToken}}
     "name": "Novo nome",
     "description": "Descrição nova"
 }
+
+###
+
+# @name view_task_details
+
+GET {{baseUrl}}/task/4beb8050-b268-493e-ac64-81961e6d9465
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+###
+
+# @name mark_task_completed
+
+PATCH {{baseUrl}}/task/4beb8050-b268-493e-ac64-81961e6d9465
+Content-Type: application/json
+Authorization: Bearer {{authToken}}

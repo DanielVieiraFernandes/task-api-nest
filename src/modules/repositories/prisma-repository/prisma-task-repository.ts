@@ -58,4 +58,17 @@ export class PrismaTaskRepository implements TaskRepository {
       },
     });
   }
+
+  async findById(taskId: string) {
+    const task = await this.prisma.task.findUnique({
+      where:{
+        id: taskId
+      },
+      omit:{
+        userId: true
+      }
+    })
+
+    return task;
+  }
 }
